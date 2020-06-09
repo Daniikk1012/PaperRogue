@@ -3,12 +3,29 @@ package com.wgsoft.game.paperrogue.screens;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Slider;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.utils.Scaling;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
+
+import static com.wgsoft.game.paperrogue.MyGdxGame.game;
 
 
 public class OptionScreen implements Screen {
     private Stage stage;
+    private Table container;
     public OptionScreen() {
+        stage = new Stage(new ScreenViewport(), game.batch);
+        stage.addActor(new Image(game.skin, "background"){{
+            setFillParent(true);
+            setScaling(Scaling.fill);
+        }});
+        container = new Table(){{
+            setFillParent(true);
+            setDebug(false);
+            add(Slider);
+        }};
 
     }
 
