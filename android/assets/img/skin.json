@@ -1,0 +1,24 @@
+{
+  BitmapFont : {
+    small : {
+      file : font/font.fnt
+      scaledSize : 32
+      markupEnabled : true
+    }
+    normal : {
+      file : font/font.fnt
+      scaledSize : 48
+      markupEnabled : true
+    }
+    large : {
+      file : font/font.fnt
+      scaledSize : 64
+      markupEnabled : true
+    }
+  }
+  LabelStyle : {
+    normal : {
+      font : normal
+    }
+  }
+}
