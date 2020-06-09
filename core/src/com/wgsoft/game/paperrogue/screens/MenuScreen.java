@@ -2,10 +2,12 @@ package com.wgsoft.game.paperrogue.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 
 import static com.wgsoft.game.paperrogue.MyGdxGame.game;
@@ -25,7 +27,14 @@ public class MenuScreen implements Screen {
             row();
             add(new TextButton("OPTIONS", game.skin, "normal"));
             row();
-            add(new TextButton("EXIT", game.skin, "normal"));
+            add(new TextButton("EXIT", game.skin, "normal"){{
+                addListener(new ChangeListener() {
+                    @Override
+                    public void changed(ChangeEvent event, Actor actor) {
+                        Gdx.app.exit();
+                    }
+                });
+            }});
         }};
 
         stage.addActor(container);
