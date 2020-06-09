@@ -24,9 +24,9 @@ public class OptionScreen implements Screen {
         container = new Table(){{
             setFillParent(true);
             setDebug(false);
-            add(Slider);
+            add(new Slider(0f, 1f, 0.1f, false, game.skin, "normal")).size(400f, 50f);
         }};
-
+        stage.addActor(container);
     }
 
     @Override
