@@ -1,9 +1,11 @@
 package com.wgsoft.game.paperrogue.screens;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 
 import static com.wgsoft.game.paperrogue.MyGdxGame.game;
@@ -18,8 +20,12 @@ public class MenuScreen implements Screen {
 
         container = new Table(){{
             setFillParent(true);
-            setDebug(true);
-            add(new Label("START", game.skin, "normal"));
+            setDebug(false);
+            add(new TextButton("START", game.skin, "normal"));
+            row();
+            add(new TextButton("OPTIONS", game.skin, "normal"));
+            row();
+            add(new TextButton("EXIT", game.skin, "normal"));
         }};
 
         stage.addActor(container);
@@ -27,6 +33,7 @@ public class MenuScreen implements Screen {
 
     @Override
     public void show() {
+        Gdx.input.setInputProcessor(stage);
     }
 
     @Override
@@ -55,6 +62,7 @@ public class MenuScreen implements Screen {
 
     @Override
     public void hide() {
+        Gdx.input.setInputProcessor(null);
     }
 
     @Override

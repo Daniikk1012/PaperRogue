@@ -21,4 +21,11 @@
       font : normal
     }
   }
+  TextButtonStyle : {
+    normal : {
+      font : normal
+      up : button/up
+      down : button/down
+    }
+}
 }
