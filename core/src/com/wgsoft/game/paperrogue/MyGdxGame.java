@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.wgsoft.game.paperrogue.screens.MenuScreen;
+import com.wgsoft.game.paperrogue.screens.OptionScreen;
 
 public class MyGdxGame extends Game {
 	public static MyGdxGame game;
@@ -15,6 +16,8 @@ public class MyGdxGame extends Game {
 	public Skin skin;
 
 	public MenuScreen menuScreen;
+
+	public OptionScreen optionScreen;
 
 	public MyGdxGame(){
 		game = this;
@@ -28,6 +31,8 @@ public class MyGdxGame extends Game {
 
 		menuScreen = new MenuScreen();
 
+		optionScreen = new OptionScreen();
+
 		setScreen(menuScreen);
 	}
 
@@ -40,7 +45,8 @@ public class MyGdxGame extends Game {
 	@Override
 	public void dispose () {
 		super.dispose();
-
+		menuScreen.dispose();
+		optionScreen.dispose();
 		batch.dispose();
 		skin.dispose();
 	}
