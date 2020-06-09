@@ -27,5 +27,12 @@
       up : button/up
       down : button/down
     }
-}
+  }
+  SliderStyle : {
+    normal : {
+      background : slider/background
+      knob : slider/knob
+      knobBefore : slider/knob-before
+    }
+  }
 }
