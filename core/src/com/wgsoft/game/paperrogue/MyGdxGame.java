@@ -6,6 +6,7 @@ import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.wgsoft.game.paperrogue.screens.GameSettingsScreen;
 import com.wgsoft.game.paperrogue.screens.MenuScreen;
 import com.wgsoft.game.paperrogue.screens.OptionScreen;
 
@@ -20,6 +21,8 @@ public class MyGdxGame extends Game {
 
 	public OptionScreen optionScreen;
 
+	public GameSettingsScreen gameSettingsScreen;
+
 	public Music bgmusic;
 
 	public MyGdxGame(){
@@ -33,6 +36,7 @@ public class MyGdxGame extends Game {
 		skin = new Skin(Gdx.files.internal("img/skin.json"));
 
 		menuScreen = new MenuScreen();
+		gameSettingsScreen = new GameSettingsScreen();
 
 		optionScreen = new OptionScreen();
 		bgmusic = Gdx.audio.newMusic(Gdx.files.internal("lol.mp3"));

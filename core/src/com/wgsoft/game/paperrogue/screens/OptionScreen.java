@@ -4,9 +4,11 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Slider;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.Scaling;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
@@ -27,13 +29,23 @@ public class OptionScreen implements Screen {
             setFillParent(true);
             setDebug(false);
             add(new Slider(0f, 1f, 0.05f, false, game.skin, "normal"){{
+                setValue(1f);
                 addListener(new ChangeListener() {
                     @Override
                     public void changed(ChangeEvent event, Actor actor) {
                         game.bgmusic.setVolume(getValue());
                     }
                 });
-            }}).size(400f, 50f);
+            }}).size(400f, 50f).padBottom(10f);
+            row();
+            add(new TextButton("BACK", game.skin, "normal"){{
+                addListener(new ChangeListener() {
+                    @Override
+                    public void changed(ChangeEvent event, Actor actor) {
+                        game.setScreen(game.menuScreen);
+                    }
+                });
+            }});
         }};
         stage.addActor(container);
     }

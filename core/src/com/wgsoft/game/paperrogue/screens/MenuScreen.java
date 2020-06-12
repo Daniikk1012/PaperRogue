@@ -29,7 +29,14 @@ public class MenuScreen implements Screen {
         container = new Table(){{
             setFillParent(true);
             setDebug(false);
-            add(new TextButton("START", game.skin, "normal"));
+            add(new TextButton("START", game.skin, "normal"){{
+                addListener(new ChangeListener() {
+                    @Override
+                    public void changed(ChangeEvent event, Actor actor) {
+                        game.setScreen(game.gameSettingsScreen);
+                    }
+                });
+            }});
             row();
             add(new TextButton("OPTIONS", game.skin, "normal"){{
                 addListener(new ChangeListener() {
