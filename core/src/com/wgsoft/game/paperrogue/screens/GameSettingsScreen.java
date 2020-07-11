@@ -46,7 +46,7 @@ public class GameSettingsScreen implements Screen {
                 addListener(new ChangeListener() {
                     @Override
                     public void changed(ChangeEvent event, Actor actor) {
-                        game.setScreen(game.PlayGameScreen);
+                        game.setScreen(game.playGameScreen);
                     }
                 });
             }});

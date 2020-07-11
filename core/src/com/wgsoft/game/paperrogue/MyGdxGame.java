@@ -9,6 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.wgsoft.game.paperrogue.screens.GameSettingsScreen;
 import com.wgsoft.game.paperrogue.screens.MenuScreen;
 import com.wgsoft.game.paperrogue.screens.OptionScreen;
+import com.wgsoft.game.paperrogue.screens.PlayGameScreen;
 
 public class MyGdxGame extends Game {
 	public static MyGdxGame game;
@@ -18,10 +19,9 @@ public class MyGdxGame extends Game {
 	public Skin skin;
 
 	public MenuScreen menuScreen;
-
 	public OptionScreen optionScreen;
-
 	public GameSettingsScreen gameSettingsScreen;
+	public PlayGameScreen playGameScreen;
 
 	public Music bgmusic;
 
@@ -37,8 +37,9 @@ public class MyGdxGame extends Game {
 
 		menuScreen = new MenuScreen();
 		gameSettingsScreen = new GameSettingsScreen();
-
 		optionScreen = new OptionScreen();
+		playGameScreen = new PlayGameScreen();
+
 		bgmusic = Gdx.audio.newMusic(Gdx.files.internal("lol.mp3"));
 		bgmusic.play();
 		bgmusic.setLooping(true);
@@ -57,6 +58,9 @@ public class MyGdxGame extends Game {
 		super.dispose();
 		menuScreen.dispose();
 		optionScreen.dispose();
+		gameSettingsScreen.dispose();
+		playGameScreen.dispose();
+		
 		batch.dispose();
 		skin.dispose();
 		bgmusic.dispose();
