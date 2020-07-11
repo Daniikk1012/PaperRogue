@@ -60,7 +60,7 @@ public class MyGdxGame extends Game {
 		optionScreen.dispose();
 		gameSettingsScreen.dispose();
 		playGameScreen.dispose();
-		
+
 		batch.dispose();
 		skin.dispose();
 		bgmusic.dispose();
