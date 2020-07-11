@@ -19,7 +19,6 @@ import static com.wgsoft.game.paperrogue.MyGdxGame.game;
 
     private Table container;
 
-    private Label MainMenuText;
     public MenuScreen(){
         stage = new Stage(new ScreenViewport(), game.batch);
 
