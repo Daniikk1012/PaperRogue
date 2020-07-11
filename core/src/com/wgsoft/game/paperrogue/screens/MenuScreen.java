@@ -5,6 +5,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
@@ -13,11 +14,12 @@ import com.badlogic.gdx.utils.viewport.ScreenViewport;
 
 import static com.wgsoft.game.paperrogue.MyGdxGame.game;
 
-public class MenuScreen implements Screen {
+    public class MenuScreen implements Screen {
     private Stage stage;
 
     private Table container;
 
+    private Label MainMenuText;
     public MenuScreen(){
         stage = new Stage(new ScreenViewport(), game.batch);
 
@@ -29,6 +31,8 @@ public class MenuScreen implements Screen {
         container = new Table(){{
             setFillParent(true);
             setDebug(false);
+            add(new Label("PaperRogue", game.skin, "large"));
+            row();
             add(new TextButton("START", game.skin, "normal"){{
                 addListener(new ChangeListener() {
                     @Override

@@ -17,8 +17,14 @@
     }
   }
   LabelStyle : {
+    small : {
+      font : small
+    }
     normal : {
       font : normal
+    }
+    large : {
+      font : large
     }
   }
   TextButtonStyle : {
