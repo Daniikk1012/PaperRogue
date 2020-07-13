@@ -32,6 +32,8 @@ import static com.wgsoft.game.paperrogue.MyGdxGame.game;
             setDebug(false);
             add(new Label("PaperRogue", game.skin, "large"));
             row();
+            add().expand();
+            row();
             add(new TextButton("START", game.skin, "normal"){{
                 addListener(new ChangeListener() {
                     @Override
@@ -76,10 +78,10 @@ import static com.wgsoft.game.paperrogue.MyGdxGame.game;
 
     @Override
     public void resize(int width, int height) {
-        if((float)width/height > 800f/480f){
-            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(480f/height);
+        if((float)width/height > 1600f/960f){
+            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(960f/height);
         }else{
-            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(800f/width);
+            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(1600f/width);
         }
         stage.getViewport().update(width, height, true);
     }

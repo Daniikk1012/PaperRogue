@@ -36,7 +36,7 @@ public class OptionScreen implements Screen {
                         game.bgmusic.setVolume(getValue());
                     }
                 });
-            }}).size(400f, 50f).padBottom(10f);
+            }}).size(800f, 100f).padBottom(20f);
             row();
             add(new TextButton("BACK", game.skin, "normal"){{
                 addListener(new ChangeListener() {
@@ -63,10 +63,10 @@ public class OptionScreen implements Screen {
 
     @Override
     public void resize(int width, int height) {
-        if((float)width/height > 800f/480f){
-            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(480f/height);
+        if((float)width/height > 1600f/960f){
+            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(960f/height);
         }else{
-            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(800f/width);
+            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(1600f/width);
         }
         stage.getViewport().update(width, height, true);
     }

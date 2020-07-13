@@ -31,10 +31,10 @@ public class PlayGameScreen implements Screen {
 
     @Override
     public void resize(int width, int height) {
-        if((float)width/height > 800f/480f){
-            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(480f/height);
+        if((float)width/height > 1600f/960f){
+            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(960f/height);
         }else{
-            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(800f/width);
+            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(1600f/width);
         }
         stage.getViewport().update(width, height, true);
     }
