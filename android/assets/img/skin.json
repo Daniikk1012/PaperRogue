@@ -2,17 +2,17 @@
   BitmapFont : {
     small : {
       file : font/font.fnt
-      scaledSize : 32
+      scaledSize : 64
       markupEnabled : true
     }
     normal : {
       file : font/font.fnt
-      scaledSize : 48
+      scaledSize : 96
       markupEnabled : true
     }
     large : {
       file : font/font.fnt
-      scaledSize : 64
+      scaledSize : 128
       markupEnabled : true
     }
   }

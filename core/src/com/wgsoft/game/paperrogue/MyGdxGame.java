@@ -43,6 +43,7 @@ public class MyGdxGame extends Game {
 		bgmusic = Gdx.audio.newMusic(Gdx.files.internal("bg2sh.mp3"));
 		bgmusic.play();
 		bgmusic.setLooping(true);
+		bgmusic.setVolume(0.25f);
 
 		setScreen(menuScreen);
 	}

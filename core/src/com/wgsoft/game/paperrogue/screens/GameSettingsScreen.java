@@ -18,11 +18,12 @@ import static com.wgsoft.game.paperrogue.MyGdxGame.game;
 public class GameSettingsScreen implements Screen {
     private Stage stage;
     private Table container;
-    private Label kolvo;
-
+    private Label countLabel;
+    public int count = 1;
 
     public GameSettingsScreen() {
         stage = new Stage(new ScreenViewport(), game.batch);
+        resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         stage.addActor(new Image(game.skin, "background"){{
             setFillParent(true);
             setScaling(Scaling.fill);
@@ -30,22 +31,24 @@ public class GameSettingsScreen implements Screen {
         container = new Table(){{
             setFillParent(true);
             setDebug(false);
-            add(kolvo = new Label( "Amount of players: 1", game.skin, "normal"));
+            add(countLabel = new Label( "Amount of players: 1", game.skin, "normal"));
             row();
             add(new Slider(1f, 4f, 1f, false, game.skin, "normal"){{
                 setValue(1f);
                 addListener(new ChangeListener() {
                     @Override
                     public void changed(ChangeEvent event, Actor actor) {
-                        kolvo.setText("Amount of players: " + (int)getValue());
+                        count = (int) getValue();
+                        countLabel.setText("Amount of players: " + count);
                     }
                 });
-            }}).size(400f, 50f).padBottom(10f);
+            }}).size(800f, 100f).padBottom(20f);
             row();
             add(new TextButton("PLAY", game.skin, "normal"){{
                 addListener(new ChangeListener() {
                     @Override
                     public void changed(ChangeEvent event, Actor actor) {
+                        game.playGameScreen.createGame();
                         game.setScreen(game.playGameScreen);
                     }
                 });
@@ -76,10 +79,10 @@ public class GameSettingsScreen implements Screen {
 
     @Override
     public void resize(int width, int height) {
-        if((float)width/height > 800f/480f){
-            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(480f/height);
+        if((float)width/height > 1600f/960f){
+            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(960f/height);
         }else{
-            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(800f/width);
+            ((ScreenViewport)stage.getViewport()).setUnitsPerPixel(1600f/width);
         }
         stage.getViewport().update(width, height, true);
     }
