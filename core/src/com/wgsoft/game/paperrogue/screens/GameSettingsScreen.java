@@ -18,11 +18,12 @@ import static com.wgsoft.game.paperrogue.MyGdxGame.game;
 public class GameSettingsScreen implements Screen {
     private Stage stage;
     private Table container;
-    private Label count;
-
+    private Label countLabel;
+    public int count = 1;
 
     public GameSettingsScreen() {
         stage = new Stage(new ScreenViewport(), game.batch);
+        resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         stage.addActor(new Image(game.skin, "background"){{
             setFillParent(true);
             setScaling(Scaling.fill);
@@ -30,14 +31,15 @@ public class GameSettingsScreen implements Screen {
         container = new Table(){{
             setFillParent(true);
             setDebug(false);
-            add(count = new Label( "Amount of players: 1", game.skin, "normal"));
+            add(countLabel = new Label( "Amount of players: 1", game.skin, "normal"));
             row();
             add(new Slider(1f, 4f, 1f, false, game.skin, "normal"){{
                 setValue(1f);
                 addListener(new ChangeListener() {
                     @Override
                     public void changed(ChangeEvent event, Actor actor) {
-                        count.setText("Amount of players: " + (int)getValue());
+                        count = (int) getValue();
+                        countLabel.setText("Amount of players: " + count);
                     }
                 });
             }}).size(800f, 100f).padBottom(20f);
@@ -46,6 +48,7 @@ public class GameSettingsScreen implements Screen {
                 addListener(new ChangeListener() {
                     @Override
                     public void changed(ChangeEvent event, Actor actor) {
+                        game.playGameScreen.createGame();
                         game.setScreen(game.playGameScreen);
                     }
                 });

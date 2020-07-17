@@ -12,6 +12,7 @@ public class DesktopLauncher {
 		settings.combineSubdirectories = true;
 		TexturePacker.process(settings, "raw/img", "img", "skin");
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		config.forceExit = false;
 		new LwjglApplication(new MyGdxGame(), config);
 	}
 }

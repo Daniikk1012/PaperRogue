@@ -21,7 +21,7 @@ import static com.wgsoft.game.paperrogue.MyGdxGame.game;
 
     public MenuScreen(){
         stage = new Stage(new ScreenViewport(), game.batch);
-
+        resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         stage.addActor(new Image(game.skin, "background"){{
             setFillParent(true);
             setScaling(Scaling.fill);
@@ -41,7 +41,7 @@ import static com.wgsoft.game.paperrogue.MyGdxGame.game;
                         game.setScreen(game.gameSettingsScreen);
                     }
                 });
-            }});
+            }}).size(800f, 200f);
             row();
             add(new TextButton("OPTIONS", game.skin, "normal"){{
                 addListener(new ChangeListener() {
@@ -50,7 +50,7 @@ import static com.wgsoft.game.paperrogue.MyGdxGame.game;
                         game.setScreen(game.optionScreen);
                     }
                 });
-            }});
+            }}).size(800f, 200f);
             row();
             add(new TextButton("EXIT", game.skin, "normal"){{
                 addListener(new ChangeListener() {
@@ -59,7 +59,7 @@ import static com.wgsoft.game.paperrogue.MyGdxGame.game;
                         Gdx.app.exit();
                     }
                 });
-            }});
+            }}).size(800f, 200f);
         }};
 
         stage.addActor(container);
