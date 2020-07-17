@@ -128,3 +128,4 @@ Thumbs.db
 
 /android/assets/img/*
 !/android/assets/img/skin.json
+!/android/assets/img/font/*
