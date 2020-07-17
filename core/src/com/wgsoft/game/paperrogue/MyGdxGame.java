@@ -40,7 +40,7 @@ public class MyGdxGame extends Game {
 		optionScreen = new OptionScreen();
 		playGameScreen = new PlayGameScreen();
 
-		bgmusic = Gdx.audio.newMusic(Gdx.files.internal("lol.mp3"));
+		bgmusic = Gdx.audio.newMusic(Gdx.files.internal("bg.wav"));
 		bgmusic.play();
 		bgmusic.setLooping(true);
 		bgmusic.setVolume(0.25f);
