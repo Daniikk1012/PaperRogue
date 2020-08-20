@@ -66,7 +66,7 @@ public class PlayGameScreen implements Screen {
         }};
         uiContainer = new Table(){{
             setFillParent(true);
-            add(new Label());
+            add(new Label("Current player:"+(current+1), game.skin, "small"));
         }};
         stage.addActor(backgroundContainer);
         stage.addActor(uiContainer);
