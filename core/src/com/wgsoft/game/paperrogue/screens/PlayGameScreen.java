@@ -5,6 +5,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.Layout;
@@ -61,6 +62,7 @@ public class PlayGameScreen implements Screen {
         }};
         uiContainer = new Table(){{
             setFillParent(true);
+            add(new Label());
         }};
         stage.addActor(backgroundContainer);
         stage.addActor(uiContainer);
