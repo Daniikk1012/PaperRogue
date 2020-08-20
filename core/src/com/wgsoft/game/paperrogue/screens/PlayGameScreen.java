@@ -11,6 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.Layout;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import com.wgsoft.game.paperrogue.objects.game.Player;
 import com.wgsoft.game.paperrogue.objects.game.Room;
 
 import static com.wgsoft.game.paperrogue.MyGdxGame.game;
@@ -24,6 +25,9 @@ public class PlayGameScreen implements Screen {
     private Table backgroundContainer;
     private Table uiContainer;
     public int x1, y1, x2, y2;
+
+    private int current;
+    private Player[] players;
 
     public PlayGameScreen() {
         stage = new Stage(new ScreenViewport(), game.batch);
@@ -107,6 +111,11 @@ public class PlayGameScreen implements Screen {
     }
 
     public void createGame(){
+        current = 0;
+        players = new Player[game.gameSettingsScreen.count];
+        for(int i = 0; i < players.length; i++){
+            players[i] = new Player();
+        }
         createLevel();
     }
 
