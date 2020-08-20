@@ -20,7 +20,8 @@ public class PlayGameScreen implements Screen {
     public Array<Room> rooms;
     private Array.ArrayIterator<Room> roomIterator;
     private Group map;
-    private Table container;
+    private Table backgroundContainer;
+    private Table uiContainer;
     public int x1, y1, x2, y2;
 
     public PlayGameScreen() {
@@ -52,13 +53,17 @@ public class PlayGameScreen implements Screen {
                 super.act(delta);
             }
         };
-        container = new Table(){{
+        backgroundContainer = new Table(){{
             setFillParent(true);
             add(new ScrollPane(new Table(){{
                 add(map);
             }})).grow();
         }};
-        stage.addActor(container);
+        uiContainer = new Table(){{
+            setFillParent(true);
+        }};
+        stage.addActor(backgroundContainer);
+        stage.addActor(uiContainer);
     }
     @Override
     public void render(float delta) {
