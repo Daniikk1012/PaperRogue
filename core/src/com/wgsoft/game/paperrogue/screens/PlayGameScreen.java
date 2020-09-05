@@ -67,31 +67,31 @@ public class PlayGameScreen implements Screen {
         }};
         uiContainer = new Table(){{
             setFillParent(true);
-            add(new Label("Current player:"+(current+1), game.skin, "small"){{
+            add(new Label("Current player:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
-            add(new Label("Level:"+players[current].level, game.skin, "small"){{
+            add(new Label("Level:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
-            add(new Label("Right Hand:"+players[current].right, game.skin, "small"){{
+            add(new Label("Right Hand:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
-            add(new Label("Right Left:"+players[current].left, game.skin, "small"){{
+            add(new Label("Right Left:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
-            add(new Label("Body Armor:"+players[current].body, game.skin, "small"){{
+            add(new Label("Body Armor:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
-            add(new Label("Head Armor:"+players[current].head, game.skin, "small"){{
+            add(new Label("Head Armor:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
-            add(new Label("Right Left:"+players[current].left, game.skin, "small"){{
+            add(new Label("Right Left:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
-            add(new Label("Other:"+players[current].other, game.skin, "small"){{
+            add(new Label("Other:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
-            add(new Label("Usable:"+players[current].usable, game.skin, "small"){{
+            add(new Label("Usable:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
             add().growX();
