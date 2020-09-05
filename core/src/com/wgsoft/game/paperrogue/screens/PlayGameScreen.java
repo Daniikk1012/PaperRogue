@@ -69,7 +69,30 @@ public class PlayGameScreen implements Screen {
             setFillParent(true);
             add(new Label("Current player:"+(current+1), game.skin, "small"){{
                 setTouchable(Touchable.disabled);
-                
+            }});
+            add(new Label("Level:"+players[current].level, game.skin, "small"){{
+                setTouchable(Touchable.disabled);
+            }});
+            add(new Label("Right Hand:"+players[current].right, game.skin, "small"){{
+                setTouchable(Touchable.disabled);
+            }});
+            add(new Label("Right Left:"+players[current].left, game.skin, "small"){{
+                setTouchable(Touchable.disabled);
+            }});
+            add(new Label("Body Armor:"+players[current].body, game.skin, "small"){{
+                setTouchable(Touchable.disabled);
+            }});
+            add(new Label("Head Armor:"+players[current].head, game.skin, "small"){{
+                setTouchable(Touchable.disabled);
+            }});
+            add(new Label("Right Left:"+players[current].left, game.skin, "small"){{
+                setTouchable(Touchable.disabled);
+            }});
+            add(new Label("Other:"+players[current].other, game.skin, "small"){{
+                setTouchable(Touchable.disabled);
+            }});
+            add(new Label("Usable:"+players[current].usable, game.skin, "small"){{
+                setTouchable(Touchable.disabled);
             }});
             add().growX();
             row();
