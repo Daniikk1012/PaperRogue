@@ -71,6 +71,9 @@ public class PlayGameScreen implements Screen {
                 setTouchable(Touchable.disabled);
                 
             }});
+            add().growX();
+            row();
+            add().growY();
         }};
         stage.addActor(backgroundContainer);
         stage.addActor(uiContainer);
