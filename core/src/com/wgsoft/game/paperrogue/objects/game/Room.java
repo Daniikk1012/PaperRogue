@@ -10,7 +10,7 @@ import com.badlogic.gdx.utils.Array;
 import static com.wgsoft.game.paperrogue.MyGdxGame.game;
 
 public class Room extends Actor implements Comparable<Room> {
-    public static final float SIZE = 128f;
+    public static final float SIZE = 192f;
     public enum Direction{
         LEFT,
         RIGHT,
