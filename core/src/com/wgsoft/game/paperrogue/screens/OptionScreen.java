@@ -30,7 +30,7 @@ public class OptionScreen implements Screen {
             setFillParent(true);
             setDebug(false);
             add(new Slider(0f, 1f, 0.05f, false, game.skin, "normal"){{
-                setValue(0.25f);
+                setValue(0.1f);
                 addListener(new ChangeListener() {
                     @Override
                     public void changed(ChangeEvent event, Actor actor) {
