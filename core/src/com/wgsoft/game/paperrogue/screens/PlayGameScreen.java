@@ -70,6 +70,9 @@ public class PlayGameScreen implements Screen {
             add(new Label("Current player:"+(current+1), game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
+            add().growX();
+            row();
+            add().growY();
         }};
         stage.addActor(backgroundContainer);
         stage.addActor(uiContainer);
