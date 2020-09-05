@@ -69,6 +69,7 @@ public class PlayGameScreen implements Screen {
             setFillParent(true);
             add(new Label("Current player:"+(current+1), game.skin, "small"){{
                 setTouchable(Touchable.disabled);
+                
             }});
         }};
         stage.addActor(backgroundContainer);
