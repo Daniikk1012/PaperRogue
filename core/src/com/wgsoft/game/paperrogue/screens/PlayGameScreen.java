@@ -67,44 +67,42 @@ public class PlayGameScreen implements Screen {
         }};
         uiContainer = new Table(){{
             setFillParent(true);
-            add(new Label("Current player:", game.skin, "small"){{
+            add(new Label("[#ffffff99]Current player:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
             row();
-            add(new Label("Level:", game.skin, "small"){{
+            add(new Label("[#ffffff99]Level:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
             row();
-            add(new Label("Right Hand:", game.skin, "small"){{
+            add(new Label("[#ffffff99]Right Hand:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
             row();
-            add(new Label("Right Left:", game.skin, "small"){{
+            add(new Label("[#ffffff99]Right Left:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
             row();
-            add(new Label("Body Armor:", game.skin, "small"){{
+            add(new Label("[#ffffff99]Body Armor:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
             row();
-            add(new Label("Head Armor:", game.skin, "small"){{
+            add(new Label("[#ffffff99]Head Armor:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
             row();
-            add(new Label("Right Left:", game.skin, "small"){{
+            add(new Label("[#ffffff99]Right Left:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
             row();
-            add(new Label("Other:", game.skin, "small"){{
+            add(new Label("[#ffffff99]Other:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
             row();
-            add(new Label("Usable:", game.skin, "small"){{
+            add(new Label("[#ffffff99]Usable:", game.skin, "small"){{
                 setTouchable(Touchable.disabled);
             }});
             add().growX();
-            row();
-            add().growY();
         }};
         stage.addActor(backgroundContainer);
         stage.addActor(uiContainer);
