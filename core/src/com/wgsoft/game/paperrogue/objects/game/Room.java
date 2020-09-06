@@ -79,6 +79,24 @@ public class Room extends Actor implements Comparable<Room> {
                     pressed = false;
                     type = Type.NONE;
                     setVisible(true);
+                    switch(type){
+                        case MEGA_BOSS:
+                            break;
+                        case BOSS:
+                            break;
+                        case JACKPOT:
+                            break;
+                        case PAPER_COIN:
+                            break;
+                        case CHEST:
+                            break;
+                        case LUCKY_ROOM:
+                            break;
+                        case REGULAR:
+                            break;
+                        case NONE:
+                            break;
+                    }
                 }
             }
         });
