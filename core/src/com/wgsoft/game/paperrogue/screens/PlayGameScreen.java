@@ -27,8 +27,8 @@ public class PlayGameScreen implements Screen {
     private Table uiContainer;
     public int x1, y1, x2, y2;
 
-    private int current;
-    private Player[] players;
+    public int current;
+    public Player[] players;
 
     public PlayGameScreen() {
         stage = new Stage(new ScreenViewport(), game.batch);
