@@ -8,7 +8,7 @@ public class Item {
         CHESTPLATE,
         MODIFY,
         OTHER,
-        USABLE,
+        USEABLE,
     }
     public Type type;
 }

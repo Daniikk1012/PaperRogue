@@ -86,68 +86,8 @@ public class Room extends Actor implements Comparable<Room> {
                         case BOSS:
                             break;
                         case JACKPOT:
-							switch(Item.values()[MathUtils.random(Item.values().length-1)]){
-                                case ONE_HAND_WEAPON:
-                                    game.playGameScreen.players[game.playGameScreen.current].twoHanded = true;
-                                    game.playGameScreen.players[game.playGameScreen.current].left = 0;
-                                    game.playGameScreen.players[game.playGameScreen.current].right = Math.max(game.playGameScreen.players[game.playGameScreen.current].right, game.playGameScreen.players[game.playGameScreen.current].level);
-                                    break;
-                                case TWO_HAND_WEAPON:
-                                    game.playGameScreen.players[game.playGameScreen.current].twoHanded = false;
-                                    if(game.playGameScreen.players[game.playGameScreen.current].left < game.playGameScreen.players[game.playGameScreen.current].right){
-                                        game.playGameScreen.players[game.playGameScreen.current].left = Math.max(game.playGameScreen.players[game.playGameScreen.current].left, game.playGameScreen.players[game.playGameScreen.current].level);
-										break;
-                                    }else{
-                                        game.playGameScreen.players[game.playGameScreen.current].right = Math.max(game.playGameScreen.players[game.playGameScreen.current].right, game.playGameScreen.players[game.playGameScreen.current].level);
-                                    }
-                                    break;
-                                case HELMET:
-                                    game.playGameScreen.players[game.playGameScreen.current].head = Math.max(game.playGameScreen.players[game.playGameScreen.current].head, game.playGameScreen.players[game.playGameScreen.current].level);
-                                    break;
-                                case CHESTPLATE:
-                                    game.playGameScreen.players[game.playGameScreen.current].body = Math.max(game.playGameScreen.players[game.playGameScreen.current].body, game.playGameScreen.players[game.playGameScreen.current].level);
-                                    break;
-                                case MODIFY:
-                                    break;
-                                case OTHER:
-                                    game.playGameScreen.players[game.playGameScreen.current].other = Math.max(game.playGameScreen.players[game.playGameScreen.current].other, game.playGameScreen.players[game.playGameScreen.current].level);
-                                    break;
-                                case USABLE:
-                                    game.playGameScreen.players[game.playGameScreen.current].usable += game.playGameScreen.players[game.playGameScreen.current].level;
-                                    break;
-                            }
                             break;
                         case PAPER_COIN:
-							switch(Item.values()[MathUtils.random(Item.values().length-1)]){
-                                case ONE_HAND_WEAPON:
-                                    game.playGameScreen.players[game.playGameScreen.current].twoHanded = true;
-                                    game.playGameScreen.players[game.playGameScreen.current].left = 0;
-                                    game.playGameScreen.players[game.playGameScreen.current].right = Math.max(game.playGameScreen.players[game.playGameScreen.current].right, game.playGameScreen.players[game.playGameScreen.current].level);
-                                    break;
-                                case TWO_HAND_WEAPON:
-                                    game.playGameScreen.players[game.playGameScreen.current].twoHanded = false;
-                                    if(game.playGameScreen.players[game.playGameScreen.current].left < game.playGameScreen.players[game.playGameScreen.current].right){
-                                        game.playGameScreen.players[game.playGameScreen.current].left = Math.max(game.playGameScreen.players[game.playGameScreen.current].left, game.playGameScreen.players[game.playGameScreen.current].level);
-										break;
-                                    }else{
-                                        game.playGameScreen.players[game.playGameScreen.current].right = Math.max(game.playGameScreen.players[game.playGameScreen.current].right, game.playGameScreen.players[game.playGameScreen.current].level);
-                                    }
-                                    break;
-                                case HELMET:
-                                    game.playGameScreen.players[game.playGameScreen.current].head = Math.max(game.playGameScreen.players[game.playGameScreen.current].head, game.playGameScreen.players[game.playGameScreen.current].level);
-                                    break;
-                                case CHESTPLATE:
-                                    game.playGameScreen.players[game.playGameScreen.current].body = Math.max(game.playGameScreen.players[game.playGameScreen.current].body, game.playGameScreen.players[game.playGameScreen.current].level);
-                                    break;
-                                case MODIFY:
-                                    break;
-                                case OTHER:
-                                    game.playGameScreen.players[game.playGameScreen.current].other = Math.max(game.playGameScreen.players[game.playGameScreen.current].other, game.playGameScreen.players[game.playGameScreen.current].level);
-                                    break;
-                                case USABLE:
-                                    game.playGameScreen.players[game.playGameScreen.current].usable += game.playGameScreen.players[game.playGameScreen.current].level;
-                                    break;
-                            }
                             break;
                         case CHEST:
                             switch(Item.Type.values()[MathUtils.random(Item.Type.values().length-1)]){
