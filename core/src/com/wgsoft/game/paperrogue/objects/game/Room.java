@@ -90,7 +90,7 @@ public class Room extends Actor implements Comparable<Room> {
                         case PAPER_COIN:
                             break;
                         case CHEST:
-                            switch(Item.Type.values()[MathUtils.random(Item.Type.values().length-1)]){
+                            switch(Item.values()[MathUtils.random(Item.values().length-1)]){
                                 case ONE_HAND_WEAPON:
                                     game.playGameScreen.players[game.playGameScreen.current].twoHanded = true;
                                     game.playGameScreen.players[game.playGameScreen.current].left = 0;
